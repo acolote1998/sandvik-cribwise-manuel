@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { HeaderNavBar } from '../header-nav-bar/header-nav-bar';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [HeaderNavBar],
   templateUrl: './header.html',
-  styles: ``
+  styles: ``,
 })
-export class Header {
-
-}
+export class Header {}
