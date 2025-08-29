@@ -3,3 +3,10 @@ export type SandvikNavBarItemType = {
   name: string;
   route?: string;
 };
+
+export type SandvikInterimItemType = {
+  id: number;
+  name: string;
+  url: string;
+  iconUrl: string;
+};
