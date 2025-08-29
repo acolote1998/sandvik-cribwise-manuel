@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SandvikNavBarItem } from '../../util/types';
+import { SandvikNavBarItemType } from '../../util/types';
 
 @Component({
   selector: 'app-sandvik-nav-bar-item-component',
@@ -8,5 +8,5 @@ import { SandvikNavBarItem } from '../../util/types';
   styles: ``,
 })
 export class SandvikNavBarItemComponent {
-  @Input({ required: true }) itemData!: SandvikNavBarItem;
+  @Input({ required: true }) itemData!: SandvikNavBarItemType;
 }

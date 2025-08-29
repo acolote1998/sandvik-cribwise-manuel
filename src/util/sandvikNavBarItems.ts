@@ -1,6 +1,6 @@
-import { SandvikNavBarItem } from './types';
+import { SandvikNavBarItemType } from './types';
 
-export const sandvikNavBarItems: SandvikNavBarItem[] = [
+export const sandvikNavBarItems: SandvikNavBarItemType[] = [
   {
     id: 0,
     name: 'Offerings',
