@@ -11,7 +11,7 @@ export const newsItems: SandvikNewsItemType[] = [
     id: 1,
     date: 'Jul 16, 2025 11:33 AM CEST',
     description: 'Interim report second quarter 2025',
-    type: 'Press release (regularoty)',
+    type: 'Press release (regulatory)',
     url: 'https://www.home.sandvik/en/news-and-media/news/2025/07/interim-report-second-quarter-2025/',
   },
   {

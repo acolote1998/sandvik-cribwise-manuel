@@ -1,5 +1,7 @@
-<div class="flex">
-  @for (newItem of newsService.getNewsItems; track newItem.id) {
-  <app-sandvik-news-item [itemData]="newItem" />
-  }
+<div class="lg:pl-[13vw] lg:pr-[13vw] pl-[6vw] pr-[6vw] pt-7 pb-8">
+  <div class="flex items-center justify-evenly">
+    @for (newItem of newsService.getNewsItems; track newItem.id) {
+    <app-sandvik-news-item [itemData]="newItem" />
+    }
+  </div>
 </div>
