@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SandvikLatestStoriesService } from './sandvik-latest-stories-service';
-import { SandvikArticleItem } from '../sandvik/sandvik-article-item/sandvik-article-item';
+import { SandvikArticleItem } from '../sandvik-article-item/sandvik-article-item';
 
 @Component({
   selector: 'app-sandvik-latest-stories',
