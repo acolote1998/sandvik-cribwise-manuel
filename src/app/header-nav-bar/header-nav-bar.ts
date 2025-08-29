@@ -8,7 +8,8 @@ import { HeaderNavBarService } from './header-nav-bar-service';
   styles: ``,
 })
 export class HeaderNavBar {
-  constructor(private navBarService: HeaderNavBarService) {
+  navBarService: HeaderNavBarService;
+  constructor(navBarService: HeaderNavBarService) {
     this.navBarService = navBarService;
   }
 }

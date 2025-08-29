@@ -1,1 +1,5 @@
-
+<div>
+  @for (navBarItem of this.navBarService.getNavBarItems; track navBarItem.id){
+  {{ navBarItem.name }}
+  }
+</div>
