@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { SandvikMixContentService } from './sandvik-mix-content-service';
+import { SandvikArticleItem } from '../sandvik-article-item/sandvik-article-item';
 
 @Component({
   selector: 'app-sandvik-mix-content',
-  imports: [],
+  imports: [SandvikArticleItem],
   templateUrl: './sandvik-mix-content.html',
   styles: ``,
 })
