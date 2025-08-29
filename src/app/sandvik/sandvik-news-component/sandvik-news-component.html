@@ -12,7 +12,7 @@
   </div>
   <div class="flex items-center justify-evenly">
     @for (newItem of newsService.getNewsItems; track newItem.id) {
-    <app-sandvik-news-item [itemData]="newItem" />
+    <app-sandvik-article-item [itemData]="newItem" />
     }
   </div>
 </div>

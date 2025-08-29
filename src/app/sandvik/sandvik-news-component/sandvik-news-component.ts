@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { SandvikNewsService } from './sandvik-news-service';
-import { SandvikNewsItem } from '../sandvik-news-item/sandvik-news-item';
+import { SandvikArticleItem } from '../sandvik-article-item/sandvik-article-item';
 
 @Component({
   selector: 'app-sandvik-news-component',
-  imports: [SandvikNewsItem],
+  imports: [SandvikArticleItem],
   templateUrl: './sandvik-news-component.html',
   styles: ``,
 })

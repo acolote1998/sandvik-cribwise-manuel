@@ -1,6 +1,10 @@
 <a href="{{ itemData.url }}">
   <div class="normal-text flex flex-col">
+    @if(itemData.pictureUrl){
+    <img src="{{ itemData.pictureUrl }}" />
+    } @if (itemData.type) {
     <span class="text-gray-600 tracking-wide">{{ itemData.type }}</span>
+    }
     <span class="tracking-wide">{{ itemData.date }}</span>
     <h2 class="text-2xl font-semibold w-111 mt-5 underline-offset-3 hover:underline">
       {{ itemData.description }}

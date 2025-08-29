@@ -1,5 +1,5 @@
-import type { SandvikNewsItemType } from './types';
-export const newsItems: SandvikNewsItemType[] = [
+import type { SandvikArticleItemType } from './types';
+export const newsItems: SandvikArticleItemType[] = [
   {
     id: 0,
     date: 'Aug 20, 2025 1:00 PM CEST',

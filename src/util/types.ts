@@ -11,10 +11,11 @@ export type SandvikInterimItemType = {
   iconUrl: string;
 };
 
-export type SandvikNewsItemType = {
+export type SandvikArticleItemType = {
   id: number;
-  type: string;
+  type?: string;
   date: string;
   description: string;
   url: string;
+  pictureUrl?: string;
 };
