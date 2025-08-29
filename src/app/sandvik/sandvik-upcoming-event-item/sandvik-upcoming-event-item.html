@@ -1,1 +1,13 @@
-<p>sandvik-upcoming-event-item works!</p>
+<div class="flex gap-5 px-10 py-8">
+  <div class="flex flex-col">
+    <h2 class="text-3xl">{{ itemData.dateNumber }}</h2>
+    <span class="font-light tracking-tighter">{{ itemData.dateMonth }}</span>
+  </div>
+  <div class="flex flex-col">
+    <h2 class="text-2xl">{{ itemData.title }}</h2>
+    <span class="cursor-pointer tracking-tight font-light">Add to calendar</span>
+  </div>
+</div>
+@if (itemData.id!==2) {
+<div class="bg-gray-200 w-full h-0.5"></div>
+}@else {}

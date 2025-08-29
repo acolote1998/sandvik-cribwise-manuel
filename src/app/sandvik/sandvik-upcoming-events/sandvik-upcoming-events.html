@@ -3,4 +3,9 @@
   @for (event of upcomingEventsService.getUpcomingEvents; track event.id) {
   <app-sandvik-upcoming-event-item [itemData]="event" />
   }
+  <button
+    class="rounded-sm mt-6 bg-[#e6e6e6] hover:bg-[#dadada] transition-colors cursor-pointer pl-5 pr-5 pt-2 pb-2"
+  >
+    All events
+  </button>
 </div>
