@@ -3,5 +3,9 @@
     <h2 class="normal-text text-2xl">Interim Report Q2</h2>
     <span class="normal-text tracking-wider text-sm">July 16, 2025 at 11:30 AM CEST</span>
   </div>
-  <div class="grid grid-cols-2"></div>
+  <div class="grid grid-cols-2">
+    @for (interimItem of interimService.getInterimItems; track interimItem.id) {
+    <app-sandvik-interim-report-item [itemData]="interimItem" />
+    }
+  </div>
 </div>
