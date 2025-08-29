@@ -1,5 +1,5 @@
 import type { SandvikInterimItemType } from './types';
-const interimItems: SandvikInterimItemType[] = [
+export const interimItems: SandvikInterimItemType[] = [
   {
     id: 0,
     name: 'Interim Report',
