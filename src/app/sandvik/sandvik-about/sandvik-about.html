@@ -1,0 +1,20 @@
+<div class="bg-[#101010] text-white py-20 my-32">
+  <div class="px-[6vw] lg:px-[13vw]">
+    <div class="flex items-center justify-between">
+      <div class="flex flex-col gap-5">
+        <h2 class="normal-text text-2xl">About Sandvik</h2>
+        <p class="normal-text tracking-wider text-sm w-113 leading-6">
+          Sandvik is a global, high-tech engineering group providing solutions that enhance
+          productivity, profitability and sustainability for the manufacturing, mining and
+          infrastructure industries. In 2024 the Group had approximately 41,000 employees and
+          revenues of about 123 billion SEK in more than 150 countries.
+        </p>
+      </div>
+      <div class="w-120 flex flex-col gap-2">
+        @for (aboutItem of aboutService.getAboutItems; track aboutItem.id) {
+        <app-sandvik-interim-report-item [itemData]="aboutItem" />
+        }
+      </div>
+    </div>
+  </div>
+</div>
