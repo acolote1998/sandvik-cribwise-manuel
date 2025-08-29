@@ -1,1 +1,5 @@
-<p>sandvik-news-component works!</p>
+<div>
+  @for (newItem of newsService.getNewsItems; track newItem.id) {
+  <app-sandvik-news-item [itemData]="newItem" />
+  }
+</div>
