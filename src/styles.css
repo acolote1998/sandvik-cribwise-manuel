@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+.sandvik-title-font {
+  font-family: 'Sansation';
+}
