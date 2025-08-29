@@ -1,11 +1,11 @@
 <a href="{{ itemData.url }}">
   <div class="normal-text flex flex-col">
     @if(itemData.bigPictureUrl){
-    <img src="{{ itemData.bigPictureUrl }}" />
+    <img class="hover:opacity-90 mb-2" src="{{ itemData.bigPictureUrl }}" />
     } @if(itemData.mediumPictureUrl){
     <img src="{{ itemData.mediumPictureUrl }}" />
     } @if (itemData.type) {
-    <span class="text-gray-600 tracking-wide">{{ itemData.type }}</span>
+    <span class="text-gray-600 tracking-tight mb-2">{{ itemData.type }}</span>
     } @if(itemData.date){
     <span class="tracking-wide">{{ itemData.date }}</span
     >}
@@ -13,7 +13,7 @@
       {{ itemData.description }}
     </h2>
     @if (itemData.text) {
-    <p>{{ itemData.text }}</p>
+    <p class="tracking-tight my-4">{{ itemData.text }}</p>
     }
   </div>
 </a>
