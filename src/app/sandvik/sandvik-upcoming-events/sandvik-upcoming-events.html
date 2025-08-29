@@ -1,1 +1,3 @@
-<p>sandvik-upcoming-events works!</p>
+@for (event of upcomingEventsService.getUpcomingEvents; track event.id) {
+<app-sandvik-upcoming-event-item [itemData]="event" />
+}
