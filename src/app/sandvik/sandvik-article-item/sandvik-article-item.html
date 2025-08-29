@@ -1,9 +1,9 @@
 <a href="{{ itemData.url }}">
   <div class="normal-text flex flex-col">
     @if(itemData.bigPictureUrl){
-    <img class="hover:opacity-90 mb-2" src="{{ itemData.bigPictureUrl }}" />
+    <img class="hover:opacity-90 mb-2 rounded-md" src="{{ itemData.bigPictureUrl }}" />
     } @if(itemData.mediumPictureUrl){
-    <img src="{{ itemData.mediumPictureUrl }}" />
+    <img class="max-h-60 max-w-110 rounded-md" src="{{ itemData.mediumPictureUrl }}" />
     } @if (itemData.type) {
     <span class="text-gray-600 tracking-tight mb-2">{{ itemData.type }}</span>
     } @if(itemData.date){

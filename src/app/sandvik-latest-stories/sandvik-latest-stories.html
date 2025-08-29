@@ -1,18 +1,16 @@
 <div class="lg:pl-[13vw] lg:pr-[13vw] pl-[6vw] pr-[6vw] py-32">
   <div class="flex justify-between pb-15">
-    <h1 class="normal-text text-3xl font-semibold">Latest News</h1>
-    <a href="https://www.home.sandvik/en/news-and-media/news/" target="_blank">
+    <h1 class="normal-text text-3xl font-semibold">Latest Stories</h1>
+    <a href="https://www.home.sandvik/en/stories/" target="_blank">
       <div class="flex items-center gap-3">
-        <span class="underline underline-offset-3 tracking-tight"
-          >All news and press releases
-        </span>
+        <span class="underline underline-offset-3 tracking-tight">All stories and articles </span>
         <img class="w-5 opacity-50" src="assets/images/continue-arrow.svg" />
       </div>
     </a>
   </div>
-  <div class="flex items-center justify-evenly">
-    @for (newItem of newsService.getNewsItems; track newItem.id) {
-    <app-sandvik-article-item [itemData]="newItem" />
+  <div class="flex justify-evenly align-top gap-7 mx-3">
+    @for (story of latestStoriesService.getLatestStories; track story.id) {
+    <app-sandvik-article-item [itemData]="story" />
     }
   </div>
 </div>
