@@ -21,3 +21,10 @@ export type SandvikArticleItemType = {
   bigPictureUrl?: string;
   mediumPictureUrl?: string;
 };
+
+export type SandvikUpcomingEventItemType = {
+  id: number;
+  dateNumber: string;
+  dateMonth: string;
+  title: string;
+};
