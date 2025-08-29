@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-sandvik-header-content',
   imports: [],
   templateUrl: './sandvik-header-content.html',
-  styles: ``
+  styles: ``,
 })
-export class SandvikHeaderContent {
-
-}
+export class SandvikHeaderContent {}

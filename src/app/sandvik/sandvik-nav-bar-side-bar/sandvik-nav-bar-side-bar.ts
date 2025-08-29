@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-sandvik-nav-bar-side-bar',
   imports: [],
   templateUrl: './sandvik-nav-bar-side-bar.html',
-  styles: ``
+  styles: ``,
 })
-export class SandvikNavBarSideBar {
-
-}
+export class SandvikNavBarSideBar {}
