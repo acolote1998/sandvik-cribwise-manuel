@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SandvikInterimItemType } from '../../util/types';
+import { SandvikInterimItemType } from '../../../util/types';
 
 @Component({
   selector: 'app-sandvik-interim-report-item',

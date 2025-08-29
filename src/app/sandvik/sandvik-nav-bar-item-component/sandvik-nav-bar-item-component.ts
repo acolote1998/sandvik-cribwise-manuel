@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SandvikNavBarItemType } from '../../util/types';
+import { SandvikNavBarItemType } from '../../../util/types';
 
 @Component({
   selector: 'app-sandvik-nav-bar-item-component',

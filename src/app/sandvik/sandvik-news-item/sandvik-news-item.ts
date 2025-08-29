@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import type { SandvikNewsItemType } from '../../util/types';
+import type { SandvikNewsItemType } from '../../../util/types';
 
 @Component({
   selector: 'app-sandvik-news-item',

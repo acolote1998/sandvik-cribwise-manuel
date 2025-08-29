@@ -1,4 +1,4 @@
-import { interimItems } from '../../util/sandvikInterimItems';
+import { interimItems } from '../../../util/sandvikInterimItems';
 import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })

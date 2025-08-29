@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SandvikLandingPage } from './sandvik-landing-page/sandvik-landing-page';
+import { SandvikLandingPage } from './sandvik/sandvik-landing-page/sandvik-landing-page';
 
 @Component({
   selector: 'app-root',
