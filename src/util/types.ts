@@ -14,8 +14,10 @@ export type SandvikInterimItemType = {
 export type SandvikArticleItemType = {
   id: number;
   type?: string;
-  date: string;
+  date?: string;
   description: string;
+  text?: string;
   url: string;
-  pictureUrl?: string;
+  bigPictureUrl?: string;
+  mediumPictureUrl?: string;
 };
