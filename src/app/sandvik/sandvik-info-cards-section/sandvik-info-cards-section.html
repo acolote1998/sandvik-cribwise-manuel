@@ -1,4 +1,4 @@
-<div>
+<div class="flex justify-center gap-8">
   @for (card of infoCardsSectionService.getInfoCards; track card.id) {
   <app-sandvik-info-card [itemData]="card" />
   }
