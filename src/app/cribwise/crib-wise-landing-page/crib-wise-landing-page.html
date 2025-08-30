@@ -1,33 +1,37 @@
-<div class="absolute z-10 text-white w-full">
-  <app-crib-wise-landing-nav-bar />
+<div class="absolute z-10 text-white w-full h-screen pointer-events-none select-none">
+  <app-crib-wise-landing-nav-bar class="pointer-events-auto select-auto" />
   <img
-    class="w-60 ml-10"
+    class="w-60 ml-10 pointer-events-auto select-auto"
     src="https://cribwise.com/wp-content/uploads/2020/03/CribWise-Logo-Black_600px.png"
     style="filter: invert(1) brightness(2)"
     alt="Cribwise Logo"
   />
-  <div class="flex flex-col justify-center items-start text-left normal-text">
-    <div class="flex flex-col text-8xl font-semibold">
-      <h1>CRIBWISE will help you</h1>
-      <div class="flex">
-        <h1>save</h1>
-        <h1 class="px-1 text-[#ff6a20]">money</h1>
-        <h1>from day one</h1>
-      </div>
-    </div>
-    <h2 class="text-2xl my-6">
-      CRIBWISE customers have reduced tool inventory costs by as much as 20%.
-    </h2>
-    <button
-      class="bg-[#ff6a20] py-3 px-8 font-semibold tracking-tight border-1 border-white hover:bg-white hover:border-black hover:text-black transition-colors ease-in cursor-pointer"
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div
+      class="flex flex-col justify-center items-start text-left normal-text pointer-events-auto select-none"
     >
-      SEE DEMO
-    </button>
+      <div class="flex flex-col text-8xl font-semibold leading-25 pr-35">
+        <h1>CRIBWISE will help you</h1>
+        <div class="flex flex-wrap">
+          <h1>save</h1>
+          <h1 class="px-1 text-[#ff6a20]">money</h1>
+          <h1>from day one</h1>
+        </div>
+      </div>
+      <h2 class="text-lg md:text-2xl my-6">
+        CRIBWISE customers have reduced tool inventory costs by as much as 20%.
+      </h2>
+      <button
+        class="bg-[#ff6a20] py-3 px-8 font-semibold tracking-tight border border-white hover:bg-white hover:border-black hover:text-black transition-colors ease-in cursor-pointer select-auto"
+      >
+        SEE DEMO
+      </button>
+    </div>
   </div>
 </div>
 <div class="w-full h-screen overflow-hidden">
   <img
-    class="w-full h-fit object-cover scale-120"
+    class="w-full h-full object-cover scale-120"
     src="/assets/images/cribwise/landing-bg.jpg"
     alt="Cribwise Landing"
   />
