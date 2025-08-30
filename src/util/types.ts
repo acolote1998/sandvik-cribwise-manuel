@@ -38,10 +38,11 @@ export type FooterPageLinkItemType = {
 
 export type CribwiseWarehouseItemType = {
   id: string;
+  itemName: string;
   new: number;
   used: number;
   refurb: number;
-  forService: string;
+  forService: number;
   pickedQuantity: number;
   location: number;
   maxQuantity: number;
@@ -52,5 +53,5 @@ export type CribwiseWarehouseItemType = {
   state: boolean;
   activeOrders: number;
   expectFromOrders: number;
-  date: string;
+  expectedDate: string;
 };
