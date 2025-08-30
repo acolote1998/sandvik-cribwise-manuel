@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './sandvik-nav-bar-side-bar.html',
   styles: ``,
 })
-export class SandvikNavBarSideBar {}
+export class SandvikNavBarSideBar {
+  constructor(private router: Router) {}
+  goToCribwise() {
+    this.router.navigate(['/cribwise']);
+  }
+}
