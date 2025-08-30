@@ -9,6 +9,7 @@ import { SandvikShareInfo } from '../sandvik-share-info/sandvik-share-info';
 import { SandvikAbout } from '../sandvik-about/sandvik-about';
 import { SandvikInfoCardsSection } from '../sandvik-info-cards-section/sandvik-info-cards-section';
 import { SandvikFooterSection } from '../sandvik-footer-section/sandvik-footer-section';
+import { SandvikMobileDisclaimer } from '../sandvik-mobile-disclaimer/sandvik-mobile-disclaimer';
 SandvikLatestStories;
 
 @Component({
@@ -24,6 +25,7 @@ SandvikLatestStories;
     SandvikAbout,
     SandvikInfoCardsSection,
     SandvikFooterSection,
+    SandvikMobileDisclaimer,
   ],
   templateUrl: './sandvik-landing-page.html',
   styles: ``,

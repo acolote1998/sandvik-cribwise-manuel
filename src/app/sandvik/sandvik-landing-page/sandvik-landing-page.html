@@ -1,13 +1,18 @@
-<app-header />
-<img src="/assets/images/sandvik-index-picture.webp" class="w-full" />
-<app-sandvik-interim-report-section />
-<app-sandvik-news-component />
-<app-sandvik-mix-content />
-<app-sandvik-latest-stories />
-<div class="flex justify-center-safe gap-5">
-  <app-sandvik-upcoming-events />
-  <app-sandvik-share-info />
+<div class="block lg:hidden">
+  <app-sandvik-mobile-disclaimer />
 </div>
-<app-sandvik-about />
-<app-sandvik-info-cards-section />
-<app-sandvik-footer-section />
+<div class="hidden lg:block">
+  <app-header />
+  <img src="/assets/images/sandvik-index-picture.webp" class="w-full" />
+  <app-sandvik-interim-report-section />
+  <app-sandvik-news-component />
+  <app-sandvik-mix-content />
+  <app-sandvik-latest-stories />
+  <div class="flex justify-center-safe gap-5">
+    <app-sandvik-upcoming-events />
+    <app-sandvik-share-info />
+  </div>
+  <app-sandvik-about />
+  <app-sandvik-info-cards-section />
+  <app-sandvik-footer-section />
+</div>
