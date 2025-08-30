@@ -1,0 +1,5 @@
+<div>
+  @for (card of infoCardsSectionService.getInfoCards; track card.id) {
+  <app-sandvik-info-card [itemData]="card" />
+  }
+</div>
