@@ -35,3 +35,22 @@ export type FooterPageLinkItemType = {
   description: string;
   url: string;
 };
+
+export type CribwiseWarehouseItemType = {
+  id: string;
+  new: number;
+  used: number;
+  refurb: number;
+  forService: string;
+  pickedQuantity: number;
+  location: number;
+  maxQuantity: number;
+  orderPoint: number;
+  minQuantity: number;
+  criticalLevel: number;
+  missingToMax: number;
+  state: boolean;
+  activeOrders: number;
+  expectFromOrders: number;
+  date: string;
+};
