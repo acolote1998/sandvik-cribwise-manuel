@@ -30,3 +30,8 @@ export type SandvikUpcomingEventItemType = {
   dateMonth: string;
   title: string;
 };
+export type FooterPageLinkItemType = {
+  id: number;
+  description: string;
+  url: string;
+};
