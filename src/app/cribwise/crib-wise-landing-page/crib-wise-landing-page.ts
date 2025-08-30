@@ -8,4 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './crib-wise-landing-page.html',
   styles: ``,
 })
-export class CribWiseLandingPage {}
+export class CribWiseLandingPage {
+  constructor(private router: Router) {}
+  toCribwiseDemoPage() {
+    this.router.navigate(['cribwise/demo']);
+  }
+}
