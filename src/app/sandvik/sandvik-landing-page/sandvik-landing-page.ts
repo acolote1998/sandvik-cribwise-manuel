@@ -8,6 +8,7 @@ import { SandvikUpcomingEvents } from '../sandvik-upcoming-events/sandvik-upcomi
 import { SandvikShareInfo } from '../sandvik-share-info/sandvik-share-info';
 import { SandvikAbout } from '../sandvik-about/sandvik-about';
 import { SandvikInfoCardsSection } from '../sandvik-info-cards-section/sandvik-info-cards-section';
+import { SandvikFooterSection } from '../sandvik-footer-section/sandvik-footer-section';
 SandvikLatestStories;
 
 @Component({
@@ -22,6 +23,7 @@ SandvikLatestStories;
     SandvikShareInfo,
     SandvikAbout,
     SandvikInfoCardsSection,
+    SandvikFooterSection,
   ],
   templateUrl: './sandvik-landing-page.html',
   styles: ``,
