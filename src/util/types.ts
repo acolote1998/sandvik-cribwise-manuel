@@ -20,6 +20,8 @@ export type SandvikArticleItemType = {
   url: string;
   bigPictureUrl?: string;
   mediumPictureUrl?: string;
+  urlText?: string;
+  urlTextIconUrl?: string;
 };
 
 export type SandvikUpcomingEventItemType = {
