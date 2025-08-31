@@ -9,50 +9,7 @@
         <span class="text-xl">Machines</span>
       </div>
       <div class="overflow-x-auto p-4">
-        <table class="min-w-full border border-gray-300 text-sm text-left">
-          <thead class="bg-black text-white">
-            <tr>
-              <th class="px-3 py-2 border-b">ITEM</th>
-              <th class="px-3 py-2 border-b">NEW</th>
-              <th class="px-3 py-2 border-b">USED</th>
-              <th class="px-3 py-2 border-b">REFURB</th>
-              <th class="px-3 py-2 border-b">FOR SERVICE</th>
-              <th class="px-3 py-2 border-b">PICKED QTY.</th>
-              <th class="px-3 py-2 border-b">LOCATION</th>
-              <th class="px-3 py-2 border-b">MAX QTY.</th>
-              <th class="px-3 py-2 border-b">ORDER POINT</th>
-              <th class="px-3 py-2 border-b">MIN QTY.</th>
-              <th class="px-3 py-2 border-b">CRITICAL LEVEL</th>
-              <th class="px-3 py-2 border-b">MISSING TO MAX</th>
-              <th class="px-3 py-2 border-b">STATE</th>
-              <th class="px-3 py-2 border-b">ACTIVE ORDERS</th>
-              <th class="px-3 py-2 border-b">EXPECT FROM ORDERS</th>
-              <th class="px-3 py-2 border-b">EXPECTED DATE</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (machine of machinesService.getMachinesData; track machine.id) {
-            <tr class="hover:bg-gray-50 even:bg-gray-50/50">
-              <td class="px-3 py-2 border-b font-medium">{{ machine.itemName }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.new }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.used }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.refurb }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.forService }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.pickedQuantity }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.location }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.maxQuantity }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.orderPoint }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.minQuantity }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.criticalLevel }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.missingToMax }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.state }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.activeOrders }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.expectFromOrders }}</td>
-              <td class="px-3 py-2 border-b">{{ machine.expectedDate }}</td>
-            </tr>
-            }
-          </tbody>
-        </table>
+        <app-crib-wise-demo-table-for-items [itemsData]="machinesService.getMachinesData" />
       </div>
     </div>
   </div>
