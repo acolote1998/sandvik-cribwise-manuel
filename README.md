@@ -2,6 +2,8 @@
 
 This is a **personal side project** I created to practice frontend development with Angular and have some fun exploring a new framework. I built it to learn Angular and prepare for an upcoming interview at Sandvik. The project includes a replica of Sandvik's landing page and a simplified version of the **CRIBWISE** tool management interface. Since the real CRIBWISE system is not publicly accessible, I guided my work by screenshots and documentation to recreate a plausible interface.
 
+Live Demo: https://acolote1998.github.io/sandvik-cribwise-manuel/
+
 ## Features
 
 - **Sandvik Landing Page:** An Angular-based landing page similar to Sandvik's main site.
