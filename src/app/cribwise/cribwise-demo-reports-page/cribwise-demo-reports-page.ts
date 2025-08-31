@@ -11,11 +11,25 @@ import { AgChartOptions } from 'ag-charts-community';
   templateUrl: './cribwise-demo-reports-page.html',
 })
 export class CribwiseDemoReportsPage {
-  public chartOptions: AgChartOptions;
+  public machinesVsToolsDistributionOptions: AgChartOptions;
+  public functioningVersusServiceMachineOptions: AgChartOptions;
   constructor(private reportsService: CribWiseReportsService) {
-    this.chartOptions = {
+    this.machinesVsToolsDistributionOptions = {
       data: reportsService.getAllQuantitiesPerItemType,
       title: { text: 'Machines vs Tools Distribution' },
+      series: [
+        {
+          sectorLabelKey: 'name',
+          sectorLabel: { color: 'white', fontWeight: 'bold' },
+          type: 'pie',
+          angleKey: 'quantity',
+          legendItemKey: 'name',
+        },
+      ],
+    };
+    this.functioningVersusServiceMachineOptions = {
+      data: reportsService.getFunctioningVersusInServiceMachines,
+      title: { text: 'Functioning vs Needing Service Machines Distribution' },
       series: [
         {
           sectorLabelKey: 'name',
