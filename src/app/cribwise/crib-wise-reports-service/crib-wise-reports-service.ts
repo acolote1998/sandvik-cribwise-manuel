@@ -32,4 +32,24 @@ export class CribWiseReportsService {
       { name: 'Needing Service', quantity: machinesNeedingService },
     ];
   }
+
+  get getFunctioningVersusInServiceTools() {
+    let functioningtools = 0;
+    this.toolsService.getToolsData.forEach((tool) => {
+      functioningtools += tool.new;
+      functioningtools += tool.used;
+      functioningtools += tool.refurb;
+    });
+    let toolsNeedingService = 0;
+    this.toolsService.getToolsData.forEach((tool) => {
+      toolsNeedingService += tool.forService;
+    });
+    return [
+      {
+        name: 'Functional',
+        quantity: functioningtools,
+      },
+      { name: 'Needing Service', quantity: toolsNeedingService },
+    ];
+  }
 }
