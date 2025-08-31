@@ -22,9 +22,9 @@ Live Demo: https://acolote1998.github.io/sandvik-cribwise-manuel/
 - **TypeScript** (programming language for components)
 - **HTML5 & CSS3/SCSS + Tailwind** (markup and styling)
 - **Angular CLI** (development tooling and local server)
-- **MatSnackBar**: for notifications
-- **Ag-Charts**: for data visualization and graphs
-- **GitHub Pages** (used for deploying the demo and making it publicly accessible)
+- **MatSnackBar** (notifications)
+- **Ag-Charts** (data visualization and graphs)
+- **GitHub Pages** (deploying and making demo publicly accessible)
 - **Node.js & npm** (runtime and package management)
 
 ## What I Learned and My Approach
