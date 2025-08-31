@@ -154,27 +154,7 @@
         </div>
         <button
           class="bg-black text-white font-semibold text-lg py-2 px-6 rounded-md cursor-pointer hover:bg-white hover:text-black border-1 transition-all ease-in"
-          (click)="
-            createItem({
-              id: generateUUID(),
-              itemName: itemName,
-              new: newQty,
-              used: usedQty,
-              refurb: refurbQty,
-              forService: forServiceQty,
-              pickedQuantity: pickedQty,
-              location: atLocationQty,
-              maxQuantity: maxQty,
-              orderPoint: orderPointQty,
-              minQuantity: minQty,
-              criticalLevel: criticalLevelQty,
-              missingToMax: missingToMaxQty,
-              state: calculateState(state),
-              activeOrders: activeOrdersQty,
-              expectFromOrders: expectFromOrdersQty,
-              expectedDate: expetedDateOfDelivery
-            })
-          "
+          (click)="createItem()"
         >
           Create Item
         </button>
