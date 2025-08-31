@@ -4,160 +4,163 @@
     <app-cribwise-demo-nav-bar />
     <div class="flex flex-col w-full mr-5">
       <div
-        class="bg-black text-green-400 py-3 px-5 font-semibold rounded-xs border-gray-400 border-1 rounded-b-sm w-full"
+        class="bg-black text-green-400 py-3 px-5 font-semibold border-gray-400 border rounded-b-sm w-full"
       >
         <span class="text-xl">New Item Form</span>
       </div>
       <div
-        class="gray-100 py-3 px-5 font-semibold rounded-xs border-gray-400 border-1 rounded-b-sm w-full"
+        class="bg-white py-6 px-8 mt-4 shadow-md rounded-lg border border-gray-300 w-full max-w-4xl"
       >
-        <div>
-          <span class="text-lg">Item type:</span>
-          <select
-            [(ngModel)]="typeOfItem"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
+        <div class="grid grid-cols-2 gap-6">
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Name</label>
+            <input
+              [(ngModel)]="itemName"
+              type="text"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Item type</label>
+            <select
+              [(ngModel)]="typeOfItem"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            >
+              <option value="tool">Tool</option>
+              <option value="machine">Machine</option>
+            </select>
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">New Amount</label>
+            <input
+              [(ngModel)]="newQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Used Amount</label>
+            <input
+              [(ngModel)]="usedQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Refurbished Amount</label>
+            <input
+              [(ngModel)]="refurbQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">For Service Amount</label>
+            <input
+              [(ngModel)]="forServiceQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Picked Quantity</label>
+            <input
+              [(ngModel)]="pickedQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">At Location Amount</label>
+            <input
+              [(ngModel)]="atLocationQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Maximum Quantity</label>
+            <input
+              [(ngModel)]="maxQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Order Point</label>
+            <input
+              [(ngModel)]="orderPointQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Minimum quantity</label>
+            <input
+              [(ngModel)]="minQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Critical Level Quantity</label>
+            <input
+              [(ngModel)]="criticalLevelQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Missing To Maximum Quantity</label>
+            <input
+              [(ngModel)]="missingToMaxQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">State</label>
+            <select
+              [(ngModel)]="state"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            >
+              <option value="available">Available</option>
+              <option value="notAvailable">Not Available</option>
+            </select>
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Active Orders</label>
+            <input
+              [(ngModel)]="activeOrdersQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Expected Quantity From Orders</label>
+            <input
+              [(ngModel)]="expectFromOrdersQty"
+              type="number"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label class="text-lg font-medium mb-1">Expected Delivery Date</label>
+            <input
+              [(ngModel)]="expetedDateOfDelivery"
+              type="date"
+              class="p-2 bg-gray-200 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400"
+            />
+          </div>
+        </div>
+        <div class="mt-8 text-right">
+          <button
+            class="bg-black text-white font-semibold text-lg py-2 px-6 rounded-md cursor-pointer hover:bg-white hover:text-black border border-black transition-all ease-in"
+            (click)="createItem()"
           >
-            <option value="tool">Tool</option>
-            <option value="machine">Machine</option>
-          </select>
+            Create Item
+          </button>
         </div>
-
-        <div>
-          <span class="text-lg">Name:</span
-          ><input
-            [(ngModel)]="itemName"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="text"
-          />
-        </div>
-        <div>
-          <span class="text-lg">New Amount:</span
-          ><input
-            [(ngModel)]="newQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Used Amount:</span
-          ><input
-            [(ngModel)]="usedQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Refurbished amount:</span
-          ><input
-            [(ngModel)]="refurbQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">For Service Amount:</span
-          ><input
-            [(ngModel)]="forServiceQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Picked Quantity Amount:</span
-          ><input
-            [(ngModel)]="pickedQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">At Location Amount:</span
-          ><input
-            [(ngModel)]="atLocationQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Maximum Quantity Allowed:</span
-          ><input
-            [(ngModel)]="maxQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Order Point:</span
-          ><input
-            [(ngModel)]="orderPointQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Minimum Quantity Allowed:</span
-          ><input
-            [(ngModel)]="minQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Critical Level Quantity:</span
-          ><input
-            [(ngModel)]="criticalLevelQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Missing to maximum quantity:</span
-          ><input
-            [(ngModel)]="missingToMaxQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">State:</span>
-          <select
-            [(ngModel)]="state"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-          >
-            <option value="available">Available</option>
-            <option value="notAvailable">Not Available</option>
-          </select>
-        </div>
-        <div>
-          <span class="text-lg">Active Orders:</span
-          ><input
-            [(ngModel)]="activeOrdersQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Expected from orders:</span
-          ><input
-            [(ngModel)]="expectFromOrdersQty"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="number"
-          />
-        </div>
-        <div>
-          <span class="text-lg">Expected delivery date:</span
-          ><input
-            [(ngModel)]="expetedDateOfDelivery"
-            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
-            type="date"
-          />
-        </div>
-        <button
-          class="bg-black text-white font-semibold text-lg py-2 px-6 rounded-md cursor-pointer hover:bg-white hover:text-black border-1 transition-all ease-in"
-          (click)="createItem()"
-        >
-          Create Item
-        </button>
       </div>
     </div>
   </div>
