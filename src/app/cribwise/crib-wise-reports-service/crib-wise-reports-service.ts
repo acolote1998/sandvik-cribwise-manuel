@@ -13,4 +13,23 @@ export class CribWiseReportsService {
       { name: 'Machines', quantity: this.machinesService.getMachinesData.length },
     ];
   }
+  get getFunctioningVersusInServiceMachines() {
+    let functioningMachines = 0;
+    this.machinesService.getMachinesData.forEach((machine) => {
+      functioningMachines += machine.new;
+      functioningMachines += machine.used;
+      functioningMachines += machine.refurb;
+    });
+    let machinesNeedingService = 0;
+    this.machinesService.getMachinesData.forEach((machine) => {
+      machinesNeedingService += machine.forService;
+    });
+    return [
+      {
+        name: 'Functional',
+        quantity: functioningMachines,
+      },
+      { name: 'Needing Service', quantity: machinesNeedingService },
+    ];
+  }
 }
