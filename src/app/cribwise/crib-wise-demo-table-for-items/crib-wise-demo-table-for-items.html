@@ -1,44 +1,46 @@
-<table class="min-w-full border border-gray-300 text-sm text-left">
-  <thead class="bg-black text-white">
-    <tr>
-      <th class="px-3 py-2 border-b">ITEM</th>
-      <th class="px-3 py-2 border-b">NEW</th>
-      <th class="px-3 py-2 border-b">USED</th>
-      <th class="px-3 py-2 border-b">REFURB</th>
-      <th class="px-3 py-2 border-b">FOR SERVICE</th>
-      <th class="px-3 py-2 border-b">PICKED QTY.</th>
-      <th class="px-3 py-2 border-b">LOCATION</th>
-      <th class="px-3 py-2 border-b">MAX QTY.</th>
-      <th class="px-3 py-2 border-b">ORDER POINT</th>
-      <th class="px-3 py-2 border-b">MIN QTY.</th>
-      <th class="px-3 py-2 border-b">CRITICAL LEVEL</th>
-      <th class="px-3 py-2 border-b">MISSING TO MAX</th>
-      <th class="px-3 py-2 border-b">STATE</th>
-      <th class="px-3 py-2 border-b">ACTIVE ORDERS</th>
-      <th class="px-3 py-2 border-b">EXPECT FROM ORDERS</th>
-      <th class="px-3 py-2 border-b">EXPECTED DATE</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for (item of itemsData; track item.id) {
-    <tr class="hover:bg-gray-50 even:bg-gray-50/50">
-      <td class="px-3 py-2 border-b font-medium">{{ item.itemName }}</td>
-      <td class="px-3 py-2 border-b">{{ item.new }}</td>
-      <td class="px-3 py-2 border-b">{{ item.used }}</td>
-      <td class="px-3 py-2 border-b">{{ item.refurb }}</td>
-      <td class="px-3 py-2 border-b">{{ item.forService }}</td>
-      <td class="px-3 py-2 border-b">{{ item.pickedQuantity }}</td>
-      <td class="px-3 py-2 border-b">{{ item.location }}</td>
-      <td class="px-3 py-2 border-b">{{ item.maxQuantity }}</td>
-      <td class="px-3 py-2 border-b">{{ item.orderPoint }}</td>
-      <td class="px-3 py-2 border-b">{{ item.minQuantity }}</td>
-      <td class="px-3 py-2 border-b">{{ item.criticalLevel }}</td>
-      <td class="px-3 py-2 border-b">{{ item.missingToMax }}</td>
-      <td class="px-3 py-2 border-b">{{ item.state }}</td>
-      <td class="px-3 py-2 border-b">{{ item.activeOrders }}</td>
-      <td class="px-3 py-2 border-b">{{ item.expectFromOrders }}</td>
-      <td class="px-3 py-2 border-b">{{ item.expectedDate }}</td>
-    </tr>
-    }
-  </tbody>
-</table>
+<div class="p-2">
+  <table class="min-w-full border border-gray-300 text-sm text-left">
+    <thead class="bg-black text-white">
+      <tr>
+        <th class="px-3 py-2 border-b">ITEM</th>
+        <th class="px-3 py-2 border-b">NEW</th>
+        <th class="px-3 py-2 border-b">USED</th>
+        <th class="px-3 py-2 border-b">REFURB</th>
+        <th class="px-3 py-2 border-b">FOR SERVICE</th>
+        <th class="px-3 py-2 border-b">PICKED QTY.</th>
+        <th class="px-3 py-2 border-b">LOCATION</th>
+        <th class="px-3 py-2 border-b">MAX QTY.</th>
+        <th class="px-3 py-2 border-b">ORDER POINT</th>
+        <th class="px-3 py-2 border-b">MIN QTY.</th>
+        <th class="px-3 py-2 border-b">CRITICAL LEVEL</th>
+        <th class="px-3 py-2 border-b">MISSING TO MAX</th>
+        <th class="px-3 py-2 border-b">STATE</th>
+        <th class="px-3 py-2 border-b">ACTIVE ORDERS</th>
+        <th class="px-3 py-2 border-b">EXPECT FROM ORDERS</th>
+        <th class="px-3 py-2 border-b">EXPECTED DATE</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of itemsData; track item.id) {
+      <tr class="hover:bg-gray-50 even:bg-gray-50/50">
+        <td class="px-3 py-2 border-b font-medium">{{ item.itemName }}</td>
+        <td class="px-3 py-2 border-b">{{ item.new }}</td>
+        <td class="px-3 py-2 border-b">{{ item.used }}</td>
+        <td class="px-3 py-2 border-b">{{ item.refurb }}</td>
+        <td class="px-3 py-2 border-b">{{ item.forService }}</td>
+        <td class="px-3 py-2 border-b">{{ item.pickedQuantity }}</td>
+        <td class="px-3 py-2 border-b">{{ item.location }}</td>
+        <td class="px-3 py-2 border-b">{{ item.maxQuantity }}</td>
+        <td class="px-3 py-2 border-b">{{ item.orderPoint }}</td>
+        <td class="px-3 py-2 border-b">{{ item.minQuantity }}</td>
+        <td class="px-3 py-2 border-b">{{ item.criticalLevel }}</td>
+        <td class="px-3 py-2 border-b">{{ item.missingToMax }}</td>
+        <td class="px-3 py-2 border-b">{{ item.state }}</td>
+        <td class="px-3 py-2 border-b">{{ item.activeOrders }}</td>
+        <td class="px-3 py-2 border-b">{{ item.expectFromOrders }}</td>
+        <td class="px-3 py-2 border-b">{{ item.expectedDate }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
