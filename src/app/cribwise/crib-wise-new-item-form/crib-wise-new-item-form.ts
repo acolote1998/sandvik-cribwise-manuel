@@ -113,7 +113,7 @@ export class CribWiseNewItemForm {
       this.router.navigate(['cribwise/demo/tools']);
     } else {
       this.machinesService.addNewTool(item);
-      this.router.navigate(['cribwise/demo/machine']);
+      this.router.navigate(['cribwise/demo/machines']);
     }
 
     this.snackBar.openFromComponent(SuccessToast, {
