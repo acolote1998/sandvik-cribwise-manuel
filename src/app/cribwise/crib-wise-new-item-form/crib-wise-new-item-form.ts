@@ -50,4 +50,7 @@ export class CribWiseNewItemForm {
       this.machinesService.addNewTool(item);
     }
   }
+  generateUUID(): string {
+    return crypto.randomUUID();
+  }
 }

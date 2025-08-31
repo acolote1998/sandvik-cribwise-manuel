@@ -147,11 +147,36 @@
         <div>
           <span class="text-lg">Expected delivery date:</span
           ><input
-            [(ngModel)]="expetedDateOfDelivery.toString"
+            [(ngModel)]="expetedDateOfDelivery"
             class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
             type="date"
           />
         </div>
+        <button
+          (click)="
+            createItem({
+              id: generateUUID(),
+              itemName: itemName,
+              new: newQty,
+              used: usedQty,
+              refurb: refurbQty,
+              forService: forServiceQty,
+              pickedQuantity: pickedQty,
+              location: atLocationQty,
+              maxQuantity: maxQty,
+              orderPoint: orderPointQty,
+              minQuantity: minQty,
+              criticalLevel: criticalLevelQty,
+              missingToMax: missingToMaxQty,
+              state: calculateState(state),
+              activeOrders: activeOrdersQty,
+              expectFromOrders: expectFromOrdersQty,
+              expectedDate: expetedDateOfDelivery
+            })
+          "
+        >
+          Create Item
+        </button>
       </div>
     </div>
   </div>
