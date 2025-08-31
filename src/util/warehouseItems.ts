@@ -381,7 +381,7 @@ export const machinesData: CribwiseWarehouseItemType[] = [
     expectFromOrders: 2,
     forService: 1,
     missingToMax: 7,
-    state: true,
+    state: false,
   },
   {
     id: 'f18d2d4a-2af1-42c6-8f2d-1e3f62e812c3',

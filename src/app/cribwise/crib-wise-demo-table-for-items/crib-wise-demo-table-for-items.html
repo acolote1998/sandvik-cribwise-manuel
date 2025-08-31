@@ -35,7 +35,10 @@
         <td class="px-3 py-2 border-b">{{ item.minQuantity }}</td>
         <td class="px-3 py-2 border-b">{{ item.criticalLevel }}</td>
         <td class="px-3 py-2 border-b">{{ item.missingToMax }}</td>
-        <td class="px-3 py-2 border-b">{{ item.state }}</td>
+        <td class="px-3 py-2 border-b">
+          @if (item.state) {<img class="w-6" src="/assets/images/tick-icon.svg" />} @else {
+          <img class="w-6" src="/assets/images/close-icon.svg" />}
+        </td>
         <td class="px-3 py-2 border-b">{{ item.activeOrders }}</td>
         <td class="px-3 py-2 border-b">{{ item.expectFromOrders }}</td>
         <td class="px-3 py-2 border-b">{{ item.expectedDate }}</td>
