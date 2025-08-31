@@ -1,5 +1,5 @@
 <div class="p-2">
-  <table class="min-w-full border border-gray-300 text-sm text-left">
+  <table class="min-w-full border border-gray-300 text-sm text-center">
     <thead class="bg-black text-white">
       <tr>
         <th class="px-3 py-2 border-b">ITEM</th>
@@ -36,8 +36,11 @@
         <td class="px-3 py-2 border-b">{{ item.criticalLevel }}</td>
         <td class="px-3 py-2 border-b">{{ item.missingToMax }}</td>
         <td class="px-3 py-2 border-b">
-          @if (item.state) {<img class="w-6" src="/assets/images/tick-icon.svg" />} @else {
-          <img class="w-6" src="/assets/images/close-icon.svg" />}
+          @if (item.state) {
+          <img class="w-7 mx-auto" src="/assets/images/tick-icon.svg" />
+          } @else {
+          <img class="w-7 mx-auto" src="/assets/images/close-icon.svg" />
+          }
         </td>
         <td class="px-3 py-2 border-b">{{ item.activeOrders }}</td>
         <td class="px-3 py-2 border-b">{{ item.expectFromOrders }}</td>
