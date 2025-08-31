@@ -6,6 +6,7 @@ import { CribwiseDemoReportsPage } from './cribwise/cribwise-demo-reports-page/c
 import { CribwiseDemoToolsPage } from './cribwise/cribwise-demo-tools-page/cribwise-demo-tools-page';
 import { CribwiseDemoMachinesPage } from './cribwise/cribwise-demo-machines-page/cribwise-demo-machines-page';
 import { CribwiseDemoAboutThisDemoPage } from './cribwise/cribwise-demo-about-this-demo-page/cribwise-demo-about-this-demo-page';
+import { CribWiseNewItemForm } from './cribwise/crib-wise-new-item-form/crib-wise-new-item-form';
 
 export const routes: Routes = [
   { path: '', component: SandvikLandingPage },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'cribwise/demo/tools', component: CribwiseDemoToolsPage },
   { path: 'cribwise/demo/machines', component: CribwiseDemoMachinesPage },
   { path: 'cribwise/demo/about-this-demo', component: CribwiseDemoAboutThisDemoPage },
+  { path: 'cribwise/demo/new-item', component: CribWiseNewItemForm },
   { path: '**', redirectTo: '' },
 ];
