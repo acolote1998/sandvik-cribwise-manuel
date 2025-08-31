@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { ToolsService } from '../cribwise-demo-tools-page/cribwise-demo-tools-service';
 import { MachinesService } from '../cribwise-demo-machines-page/cribwise-demo-machines-service';
+import { CribwiseWarehouseItemType } from '../../../util/types';
 
 @Component({
   selector: 'app-crib-wise-new-item-form',
@@ -41,5 +42,12 @@ export class CribWiseNewItemForm {
     if (availability === 'available') {
       return true;
     } else return false;
+  }
+  createItem(item: CribwiseWarehouseItemType) {
+    if (this.typeOfItem === 'tool') {
+      this.toolsService.addNewTool(item);
+    } else if (this.typeOfItem === 'machine') {
+      this.machinesService.addNewTool(item);
+    }
   }
 }
