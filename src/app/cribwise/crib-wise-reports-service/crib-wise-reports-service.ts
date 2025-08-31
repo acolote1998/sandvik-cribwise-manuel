@@ -52,4 +52,26 @@ export class CribWiseReportsService {
       { name: 'Needing Service', quantity: toolsNeedingService },
     ];
   }
+
+  get getAvailableToolsVersusAvailableMachines() {
+    let availableTools = 0;
+    let availableMachines = 0;
+    this.toolsService.getToolsData.forEach((tool) => {
+      if (tool.state) {
+        availableTools++;
+      }
+    });
+    this.machinesService.getMachinesData.forEach((machine) => {
+      if (machine.state) {
+        availableMachines++;
+      }
+    });
+    return [
+      {
+        name: 'Available Tools',
+        quantity: availableTools,
+      },
+      { name: 'Available Machines', quantity: availableMachines },
+    ];
+  }
 }

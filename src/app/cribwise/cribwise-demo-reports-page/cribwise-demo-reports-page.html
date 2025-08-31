@@ -8,8 +8,38 @@
       >
         <span class="text-xl">Reports</span>
       </div>
-      <ag-charts style="height: 100%" [options]="machinesVsToolsDistributionOptions" />
-      <ag-charts style="height: 100%" [options]="functioningVersusServiceMachineOptions" />
+      <div class="flex flex-col bg-white">
+        <div class="flex flex-col items-center gap-2">
+          <h2 class="text-2xl font-semibold text-gray-800">Machines and Tools</h2>
+          <div class="flex gap-40 w-full">
+            <ag-charts
+              [options]="machinesVsToolsDistributionOptions"
+              style="height: 80%; width: 100%"
+            />
+            <ag-charts
+              [options]="availableToolsVersusAvailableMachines"
+              style="height: 80%; width: 100%"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 border-t-1">
+          <div class="flex flex-col gap-2 text-center border-r-1">
+            <h2 class="text-xl font-medium text-gray-700 p-3">Machines</h2>
+            <ag-charts
+              [options]="functioningVersusServiceMachineOptions"
+              style="height: 80%; width: 100%"
+            />
+          </div>
+          <div class="flex flex-col gap-2 text-center">
+            <h2 class="text-xl font-medium text-gray-700 p-3">Tools</h2>
+            <ag-charts
+              [options]="functioningVersusServiceToolOptions"
+              style="height: 80%; width: 100%"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
