@@ -12,6 +12,17 @@
         class="gray-100 py-3 px-5 font-semibold rounded-xs border-gray-400 border-1 rounded-b-sm w-full"
       >
         <div>
+          <span class="text-lg">Item type:</span>
+          <select
+            [(ngModel)]="typeOfItem"
+            class="p-2 my-2 mx-2 bg-gray-200 rounded-lg border-1 border-gray-400"
+          >
+            <option value="tool">Tool</option>
+            <option value="machine">Machine</option>
+          </select>
+        </div>
+
+        <div>
           <span class="text-lg">Name:</span
           ><input
             [(ngModel)]="itemName"

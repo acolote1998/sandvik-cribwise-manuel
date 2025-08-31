@@ -11,6 +11,7 @@ import { NgModule } from '@angular/core';
   styles: ``,
 })
 export class CribWiseNewItemForm {
+  typeOfItem!: 'tool' | 'machine';
   itemName!: string;
   newQty!: number;
   usedQty!: number;
@@ -23,7 +24,7 @@ export class CribWiseNewItemForm {
   minQty!: number;
   criticalLevelQty!: number;
   missingToMaxQty!: number;
-  state!: boolean;
+  state!: string;
   activeOrdersQty!: number;
   expectFromOrdersQty!: number;
   expetedDateOfDelivery!: string;
