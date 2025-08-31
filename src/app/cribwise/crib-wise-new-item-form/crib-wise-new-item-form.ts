@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { ToolsService } from '../cribwise-demo-tools-page/cribwise-demo-tools-service';
 import { MachinesService } from '../cribwise-demo-machines-page/cribwise-demo-machines-service';
 import { CribwiseWarehouseItemType } from '../../../util/types';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SuccessToast } from '../../success-toast/success-toast';
 
 @Component({
   selector: 'app-crib-wise-new-item-form',
@@ -16,7 +18,9 @@ import { CribwiseWarehouseItemType } from '../../../util/types';
 export class CribWiseNewItemForm {
   toolsService: ToolsService;
   machinesService: MachinesService;
-  constructor(toolsService: ToolsService, machinesService: MachinesService) {
+  snackBar: MatSnackBar;
+  constructor(snackBar: MatSnackBar, toolsService: ToolsService, machinesService: MachinesService) {
+    this.snackBar = snackBar;
     this.toolsService = toolsService;
     this.machinesService = machinesService;
   }
@@ -49,6 +53,11 @@ export class CribWiseNewItemForm {
     } else if (this.typeOfItem === 'machine') {
       this.machinesService.addNewTool(item);
     }
+    this.snackBar.openFromComponent(SuccessToast, {
+      duration: 1000,
+      verticalPosition: 'bottom',
+      horizontalPosition: 'center',
+    });
   }
   generateUUID(): string {
     return crypto.randomUUID();
