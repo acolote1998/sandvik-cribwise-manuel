@@ -8,6 +8,7 @@ import { MachinesService } from '../cribwise-demo-machines-page/cribwise-demo-ma
 import { CribwiseWarehouseItemType } from '../../../util/types';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SuccessToast } from '../../success-toast/success-toast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crib-wise-new-item-form',
@@ -19,7 +20,12 @@ export class CribWiseNewItemForm {
   toolsService: ToolsService;
   machinesService: MachinesService;
   snackBar: MatSnackBar;
-  constructor(snackBar: MatSnackBar, toolsService: ToolsService, machinesService: MachinesService) {
+  constructor(
+    private router: Router,
+    snackBar: MatSnackBar,
+    toolsService: ToolsService,
+    machinesService: MachinesService
+  ) {
     this.snackBar = snackBar;
     this.toolsService = toolsService;
     this.machinesService = machinesService;
@@ -50,13 +56,16 @@ export class CribWiseNewItemForm {
   createItem(item: CribwiseWarehouseItemType) {
     if (this.typeOfItem === 'tool') {
       this.toolsService.addNewTool(item);
+      this.router.navigate(['cribwise/demo/tools']);
     } else if (this.typeOfItem === 'machine') {
       this.machinesService.addNewTool(item);
+      this.router.navigate(['cribwise/demo/machine']);
     }
     this.snackBar.openFromComponent(SuccessToast, {
-      duration: 1000,
-      verticalPosition: 'bottom',
+      duration: 1800,
+      verticalPosition: 'top',
       horizontalPosition: 'center',
+      panelClass: ['bg-white'],
     });
   }
   generateUUID(): string {
