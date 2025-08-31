@@ -7,8 +7,9 @@ import { ToolsService } from '../cribwise-demo-tools-page/cribwise-demo-tools-se
 import { MachinesService } from '../cribwise-demo-machines-page/cribwise-demo-machines-service';
 import { CribwiseWarehouseItemType } from '../../../util/types';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SuccessToast } from '../../success-toast/success-toast';
+import { SuccessToast } from '../../util/success-toast/success-toast';
 import { Router } from '@angular/router';
+import { ErrorToast } from '../../util/error-toast/error-toast';
 
 @Component({
   selector: 'app-crib-wise-new-item-form',
@@ -53,21 +54,76 @@ export class CribWiseNewItemForm {
       return true;
     } else return false;
   }
-  createItem(item: CribwiseWarehouseItemType) {
+
+  areInputsInvalid() {
+    return (
+      !this.typeOfItem ||
+      !this.itemName ||
+      this.newQty == null ||
+      this.usedQty == null ||
+      this.refurbQty == null ||
+      this.forServiceQty == null ||
+      this.pickedQty == null ||
+      this.atLocationQty == null ||
+      this.maxQty == null ||
+      this.orderPointQty == null ||
+      this.minQty == null ||
+      this.criticalLevelQty == null ||
+      this.missingToMaxQty == null ||
+      !this.state ||
+      this.activeOrdersQty == null ||
+      this.expectFromOrdersQty == null ||
+      !this.expetedDateOfDelivery
+    );
+  }
+
+  createItem() {
+    if (this.areInputsInvalid()) {
+      this.snackBar.openFromComponent(ErrorToast, {
+        duration: 2500,
+        verticalPosition: 'bottom',
+        horizontalPosition: 'center',
+        panelClass: ['bg-red-200', 'text-center'],
+      });
+      return;
+    }
+
+    const item: CribwiseWarehouseItemType = {
+      id: this.generateUUID(),
+      itemName: this.itemName,
+      new: this.newQty,
+      used: this.usedQty,
+      refurb: this.refurbQty,
+      forService: this.forServiceQty,
+      pickedQuantity: this.pickedQty,
+      location: this.atLocationQty,
+      maxQuantity: this.maxQty,
+      orderPoint: this.orderPointQty,
+      minQuantity: this.minQty,
+      criticalLevel: this.criticalLevelQty,
+      missingToMax: this.missingToMaxQty,
+      state: this.calculateState(this.state),
+      activeOrders: this.activeOrdersQty,
+      expectFromOrders: this.expectFromOrdersQty,
+      expectedDate: this.expetedDateOfDelivery,
+    };
+
     if (this.typeOfItem === 'tool') {
       this.toolsService.addNewTool(item);
       this.router.navigate(['cribwise/demo/tools']);
-    } else if (this.typeOfItem === 'machine') {
+    } else {
       this.machinesService.addNewTool(item);
       this.router.navigate(['cribwise/demo/machine']);
     }
+
     this.snackBar.openFromComponent(SuccessToast, {
       duration: 1800,
       verticalPosition: 'top',
       horizontalPosition: 'center',
-      panelClass: ['bg-white'],
+      panelClass: ['bg-green-200', 'text-center'],
     });
   }
+
   generateUUID(): string {
     return crypto.randomUUID();
   }
