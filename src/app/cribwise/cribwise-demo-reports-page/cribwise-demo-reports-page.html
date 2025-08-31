@@ -2,10 +2,13 @@
   <app-cribwise-demo-header />
   <div class="flex justify-start items-start">
     <app-cribwise-demo-nav-bar />
-    <div
-      class="bg-black text-white gap-5 py-3 px-5 font-semibold rounded-xs border-gray-400 border-1 rounded-b-sm w-full mr-5"
-    >
-      <span class="text-xl">Reports</span>
+    <div class="flex flex-col w-full mr-5">
+      <div
+        class="bg-black text-white gap-5 py-3 px-5 font-semibold rounded-xs border-gray-400 border-1 rounded-b-sm"
+      >
+        <span class="text-xl">Reports</span>
+      </div>
+      <ag-charts style="height: 100%" [options]="chartOptions" />
     </div>
   </div>
 </div>

@@ -7,4 +7,10 @@ export class CribWiseReportsService {
   get getAllItems() {
     return [...this.toolsService.getToolsData, ...this.machinesService.getMachinesData];
   }
+  get getAllQuantitiesPerItemType() {
+    return [
+      { name: 'Tools', quantity: this.toolsService.getToolsData.length },
+      { name: 'Machines', quantity: this.machinesService.getMachinesData.length },
+    ];
+  }
 }
