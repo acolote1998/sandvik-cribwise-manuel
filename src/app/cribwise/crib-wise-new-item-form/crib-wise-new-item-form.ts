@@ -3,6 +3,8 @@ import { CribwiseDemoHeader } from '../cribwise-demo-header/cribwise-demo-header
 import { CribwiseDemoNavBar } from '../cribwise-demo-nav-bar/cribwise-demo-nav-bar';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { ToolsService } from '../cribwise-demo-tools-page/cribwise-demo-tools-service';
+import { MachinesService } from '../cribwise-demo-machines-page/cribwise-demo-machines-service';
 
 @Component({
   selector: 'app-crib-wise-new-item-form',
@@ -11,6 +13,12 @@ import { NgModule } from '@angular/core';
   styles: ``,
 })
 export class CribWiseNewItemForm {
+  toolsService: ToolsService;
+  machinesService: MachinesService;
+  constructor(toolsService: ToolsService, machinesService: MachinesService) {
+    this.toolsService = toolsService;
+    this.machinesService = machinesService;
+  }
   typeOfItem!: 'tool' | 'machine';
   itemName!: string;
   newQty!: number;
