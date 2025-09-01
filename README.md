@@ -37,7 +37,7 @@ Throughout the project, I aimed for clean, maintainable code and a logical file 
 
 To run this project on your machine, follow these steps:
 
-1. **Clone the repository:** `git clone https://github.com/acolote1998/sandvik-CRIBWISE-manuel/`
+1. **Clone the repository:** `git clone https://github.com/acolote1998/sandvik-cribwise-manuel/`
 2. **Install dependencies:** Navigate into the project folder and run `npm install`.
 3. **Start the development server:** Run `ng serve` (or `npm start`) and open `http://localhost:4200` in your browser.
 4. **Explore the app:** You should see the Sandvik landing page and be able to navigate to the CRIBWISE landing page. Once there, please click "SEE DEMO" for the CRIBWISE demo app.
